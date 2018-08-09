@@ -6,9 +6,9 @@ let enviar = document.getElementById('enviar');
 let contentPhoto = document.getElementById('contentPhoto');
 let btnPhoto = document.getElementById('btnPhoto');
 
-btnRegister.addEventListener('click', event =>{
-    welcome.style.display = 'none';
-    contentRegister.style.display = 'block';
+btnRegister.addEventListener('click', event => {
+  welcome.style.display = 'none';
+  contentRegister.style.display = 'block';
 });
 
 enviar.addEventListener('click', event =>{
