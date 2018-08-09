@@ -25,16 +25,16 @@ enviar.addEventListener('click', event =>{
 //         subject: this.subject,
 //       };
 
-//       emailjs.send('gmail', 'wework', data)
-//         .then(function(response) {
-//           if (response.text === 'OK') {
-//             alert('El correo se ha enviado de forma exitosa');
-//           }
-//           console.log('SUCCESS. status=%d, text=%s', response.status, response.text);
-//         }, function(err) {
-//           alert('Ocurrió un problema al enviar el correo');
-//           console.log('FAILED. error=', err);
-//         });
-//     }
-//   }
-// });
+      emailjs.send('gmail', 'wework', data)
+        .then(function(response) {
+          if (response.text === 'OK') {
+            alert('El correo se ha enviado de forma exitosa');
+          }
+          console.log('SUCCESS. status=%d, text=%s', response.status, response.text);
+        }, function(err) {
+          alert('Ocurrió un problema al enviar el correo');
+          console.log('FAILED. error=', err);
+        });
+    }
+  }
+});
