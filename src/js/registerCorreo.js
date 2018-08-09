@@ -20,7 +20,6 @@ const userVisit = () => {
   sendVisit(userData);
 };
 
-
 // boton que acciona la funcion UserVisit
 let enviar = document.getElementById('enviar');
 enviar.addEventListener('click', userVisit);
