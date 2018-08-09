@@ -3,6 +3,7 @@ let welcome = document.getElementById('welcome');
 let contentRegister = document.getElementById('contentRegister');
 let selectionEmployee = document.getElementById('selectionEmployee');
 let enviar = document.getElementById('enviar');
+
 let contentPhoto = document.getElementById('contentPhoto');
 let btnPhoto = document.getElementById('btnPhoto');
 
