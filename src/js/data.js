@@ -1,5 +1,8 @@
 
 
+databaseRef = firebase.database();
+
+
 
 const sendVisit = () => {
   visitData = {
@@ -15,3 +18,5 @@ const sendVisit = () => {
 };
 sendVisit();
 
+
+// FUNCION PARA LA SELECCION DE EMPLEADOS
