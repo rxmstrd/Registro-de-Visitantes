@@ -1,5 +1,5 @@
-let enviar = document.getElementById('enviar');
+let btnPhoto = document.getElementById('btnPhoto');
 
-enviar.addEventListener('click', event =>{
-    location.href = 'photo.html';
-  });
+btnPhoto.addEventListener('click', event =>{
+  location.href = 'employees.html';
+});

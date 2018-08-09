@@ -1,16 +1,22 @@
-let btnPhoto = document.getElementById('btnPhoto');
 
-btnPhoto.addEventListener('click', event =>{
-  location.href = 'employees.html';
-});
 
 databaseRef = firebase.database();
 
-userId = 1;
 
-databaseRef.ref(`Visitantes/${userId}`);
 
-console.log(databaseRef);
+const sendVisit = () => {
+  visitData = {
+    Nombre: 'Maria',
+    Apellido: 'Mendez',
+    Correo: 'garciaivonn11@gmail.com'
+  };
+  userId = 1;
+  databaseRef = firebase.database().ref(`Visitantes/${userId}`);
+  console.log(databaseRef);
+  console.log(visitData);
+  databaseRef.set(visitData);
+};
+sendVisit();
 
 
 // FUNCION PARA LA SELECCION DE EMPLEADOS
