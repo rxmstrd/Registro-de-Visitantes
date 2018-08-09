@@ -1,40 +1,25 @@
+// *********************************************************************
+// Llamados al dom para registrar visitantes y enviar correo.
+const name = document.getElementById('name');
+const secondName = document.getElementById('secondName');
+const subject = document.getElementById('subject');
+const email = document.getElementById('email');
+
+// funcion que guarda los datos del usuario
+const userVisit = () => {
+  let date = new Date();
+  let userDate = `${date.getDate()}-${date.getMonth() + 1}-${date.getFullYear()}-${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`;
+
+  userData = {
+    userId: userDate,
+    Nombre: name.value,
+    Apellido: secondName.value,
+    Asunto: subject.value,
+    correo: email.value,
+  };
+  sendVisit(userData);
+};
+
+// boton que acciona la funcion UserVisit
 let enviar = document.getElementById('enviar');
-
-enviar.addEventListener('click', event =>{
-  location.href = 'photo.html';
-});
-// (function() {
-//   emailjs.init('user_bDXyjVhH72GtVYaQohpWX');
-// })();
-// const vue = new Vue({
-//   el: '#app',
-//   data() {
-//     return {
-//       from_name: '',
-//       from_email: '',
-//       message: '',
-//       subject: '',
-//     };
-//   },
-//   methods: {
-//     enviar.addEventListener("click", function () {
-//       let data = {
-//         from_name: this.from_name,
-//         from_email: this.from_email,
-//         message: this.message,
-//         subject: this.subject,
-//       };
-
-      emailjs.send('gmail', 'wework', data)
-        .then(function(response) {
-          if (response.text === 'OK') {
-            alert('El correo se ha enviado de forma exitosa');
-          }
-          console.log('SUCCESS. status=%d, text=%s', response.status, response.text);
-        }, function(err) {
-          alert('Ocurrió un problema al enviar el correo');
-          console.log('FAILED. error=', err);
-        });
-    }
-  }
-});
+enviar.addEventListener('click', userVisit);
