@@ -1,10 +1,5 @@
 
-
-databaseRef = firebase.database();
-
-
-
-const sendVisit = () => {
+window.sendVisit = () => {
   visitData = {
     Nombre: 'Maria',
     Apellido: 'Mendez',

@@ -17,7 +17,7 @@ enviar.addEventListener('click', event =>{
 //     };
 //   },
 //   methods: {
-//     function () {
+//     enviar.addEventListener("click", function () {
 //       let data = {
 //         from_name: this.from_name,
 //         from_email: this.from_email,
