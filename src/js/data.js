@@ -13,3 +13,5 @@ window.sendVisit = () => {
 };
 sendVisit();
 
+
+// FUNCION PARA LA SELECCION DE EMPLEADOS
