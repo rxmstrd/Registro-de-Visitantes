@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+            <title>
+                Registro de Vicitante
+            </title>
+        </meta>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+        </link>
+    </head>
+    <body>
+        <div id="app" style="padding-top: 8rem;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-sm-offset-3 form-group">
+                        <label>
+                            Nombre:
+                        </label>
+                        <input class="form-control" type="text" v-model="from_name">
+                        </input>
+                    </div>
+                    <div class="col-sm-6 col-sm-offset-3 form-group">
+                        <label>
+                            Asunto:
+                        </label>
+                        <input class="form-control" type="text" v-model="subject">
+                        </input>
+                    </div>
+                    <div class="col-sm-6 col-sm-offset-3 form-group">
+                        <label>
+                            Correo:
+                        </label>
+                        <input class="form-control" type="email" v-model="from_email">
+                        </input>
+                    </div>
+                    <div class="col-sm-6 col-sm-offset-3 form-group">
+                        <label>
+                            Mensaje:
+                        </label>
+                        <textarea class="form-control" v-model="message">
+                        </textarea>
+                    </div>
+                    <div class="col-sm-6 col-sm-offset-3 text-center">
+                        <button id="enviar" class="btn btn-success">
+                            Enviar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.min.js">
+        </script>
+        <script src="https://cdn.emailjs.com/dist/email.min.js" type="text/javascript">
+        </script>
+        <script src="../js/registerCorreo.js"></script>
+      </body>
+</html>
