@@ -1,4 +1,6 @@
 
+
+
 const sendVisit = () => {
   visitData = {
     Nombre: 'Maria',
@@ -13,13 +15,3 @@ const sendVisit = () => {
 };
 sendVisit();
 
-const adduser = (usuario) => {
-  let database = firebase.database();
-  let user = {
-    uid: usuario.uid,
-    name: usuario.displayName,
-    mail: usuario.email,
-    photo: usuario.photoURL
-  };
-  firebase.database().ref(`user/${usuario.uid}`).set(user);
-};
