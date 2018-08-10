@@ -1,8 +1,12 @@
 
 window.sendVisit = (visitData) => {
-  databaseRef = firebase.database().ref(`Visitantes/${visitData.Nombre}-${visitData.userId}`);
+  console.log(visitData);
+  databaseRef = firebase.database().ref(`Visitantes/${visitData.userId}-${visitData.Nombre}`);
   databaseRef.set(visitData);
-  location.href = 'employees.html';
+  // viewEmployes();  
+  // location.href = 'employees.html';
+  // swal('Se enviara un email a tu anfitrion para avisar de tu llegada, presiona Continuar');
 };
+
 
 // FUNCION PARA LA SELECCION DE EMPLEADOS

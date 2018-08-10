@@ -107,7 +107,8 @@ function hideUI() {
 // boton que redirecciona de register al inicio
 const comeback3 = document.getElementById('comeback3');
 comeback3.addEventListener('click', event => location.href = '../index.html');
+
 // Boton que accionara funcion que guardara foto, enviara correo y redirecciona al inicio.
-const savePhoto = document.getElementById('save-photo');
-savePhoto.addEventListener('click', event => location.href = '../index.html');
+// const savePhoto = document.getElementById('save-photo');
+// savePhoto.addEventListener('click', (event) => location.href = '../index.html');
 
