@@ -53,7 +53,7 @@ https://whimsical.co/61UP2DSSoWmTyyW5KmQviA
 
 #Hitorias de Usuario
 
-"Yo como adminitrador quiero contar con el nombre de los visitantes, motivo de su visita, hora de entrada y a quién visitó para poder acceder a esa información en caso de requerirla"
+"Yo como administrador quiero contar con el nombre de los visitantes, motivo de su visita, hora de entrada y a quién visitó para poder acceder a esa información en caso de requerirla"
 
 "Yo como anfitrión quiero contar con avisos oportunos sobre mis visitantes para cumplir con mi citas a tiempo y no dejar esperando a mis visitantes"
 
