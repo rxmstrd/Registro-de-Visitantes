@@ -69,6 +69,3 @@ Prototipo clickeable de alta fidelidad:
 
 https://marvelapp.com/5ei6a07/screen/46634932
 
-
-
-

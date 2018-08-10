@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Registro de Visitas</title>
+  <!--Bootstrap-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+  <!-- agrega sweet alert -->
+  <!-- <link rel="stylesheet" type="text/css" href="lib/sweet-alert.css"> -->
+  <!--Link css-->
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+  <div class="container">
+    <!-- boton volver en header -->
+    <header>
+      <div class="mx-auto margen">
+        <button id="comeback" class="btn btn-outline-dark btn-lg">
+          volver
+        </button>
+      </div>
+    </header>
+
+    <div class="row margen">
+
+      <div class="col-sm-12 col-md-6 form-group">
+        <label class="text font-weight-bold">
+          ¿Cuál es tu Nombre?:
+        </label>
+        <input id="name" class="form-control" placeholder="Nombre" type="text" v-model="from_name">
+        </input>
+      </div>
+
+      <div class="col-sm-12 col-md-6 form-group">
+        <label class="text font-weight-bold">
+          ¿Cuál es tu Apellido?:
+        </label>
+        <input id="secondName" class="form-control" placeholder="Apellido" type="text" v-model="from_name">
+        </input>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12 col-md-6 form-group">
+        <label class="text font-weight-bold">
+          ¿Por qué nos visitas?:
+        </label>
+        <input id="subject" class="form-control" placeholder="Asunto" type="text" v-model="subject">
+        </input>
+      </div>
+      <div class="col-sm-12 col-md-6 form-group">
+        <label class="text font-weight-bold">
+          ¿Cuál es tu Correo Electrónico?:
+        </label>
+        <input id="email" class="form-control" placeholder="email" type="email" v-model="from_email">
+        </input>
+      </div>
+    </div>
+    <div class="row">
+      <div class="mx-auto">
+        <button id="enviar" class="btn btn-outline-dark btn-lg margen">
+          Enviar
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- firebase -->
+  <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+
+  <!--Bootstrap-->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+
+  <!--JS-->
+  <script src="../js/credenciales.js"></script>
+  <script src="../js/registerCorreo.js"></script>
+  <script src="../js/data.js"></script>
+</body>
+
+</html>
