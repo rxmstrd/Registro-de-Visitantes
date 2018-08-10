@@ -1,4 +1,4 @@
-#Introducción:
+# Introducción:
 
 Terminal 1 Tehuantepec 170, se compone por una comunidad de emprendedores que establecen sus oficinas o estaciones de trabajo dentro de sus instalaciones.
 
@@ -7,7 +7,7 @@ Actualmente la comunidad cuenta con 36 empresas distintas que a diario realizan 
 Este flujo de personas presenta un reto en cuanto a seguridad y servicio para los administradores de Terminal 1, pues el registro de personas es un área de oportunidad por mejorar con el fin de hacer más ágil el acceso de los visitantes y el enlace con el anfitrión que le espera.
 
 
-#Problema
+# Problema
 
 Actualmente la recepción y registro de visitas se lleva a cabo de forma manual, y el proceso es el siguiente:
 
@@ -29,7 +29,7 @@ Actualmente no se solicita algún tipo de identificación y no se otorga ningún
 
 Como se puede apreciar el proceso es teedioso y puede volvere problemático en horarios de alta afluencia de visitantes.
 
-#Investigación
+# Investigación
 
 
 Se realizaron las siguientes entrevistas:
@@ -41,17 +41,13 @@ Se realizaron las siguientes entrevistas:
 Se realizó la prueba de Cliente incognito en:
 We-work Insurgentes Sur 601
 
-Documentación en Proceso.
-
-Archivos en:
-https://drive.google.com/open?id=10ku7Gbd8o37HP1_roXEc7s3-F_i0l_in
+Documentación en Proceso en estos [Archivos](https://drive.google.com/open?id=10ku7Gbd8o37HP1_roXEc7s3-F_i0l_in)
 
 
-Como resultado preeliminar se realizó el siguiente flujo:
+Como resultado preeliminar se realizó el siguiente [flujo](https://whimsical.co/61UP2DSSoWmTyyW5KmQviA).
 
-https://whimsical.co/61UP2DSSoWmTyyW5KmQviA
 
-#Historias de Usuario
+# Historias de Usuario
 
 "Yo como administrador quiero contar con el nombre de los visitantes, motivo de su visita, hora de entrada y a quién visitó para poder acceder a esa información en caso de requerirla"
 
@@ -60,12 +56,12 @@ https://whimsical.co/61UP2DSSoWmTyyW5KmQviA
 "Yo como visitante del coworking quiero realizar registros ágiles de mi ingreso a las instalaciones para no tener complicaciones antes de mi reunión"
 
 
-#Prototipado
+# Prototipado
 
-Scketch:
-https://drive.google.com/open?id=10ku7Gbd8o37HP1_roXEc7s3-F_i0l_in
+[Scketch](https://drive.google.com/open?id=10ku7Gbd8o37HP1_roXEc7s3-F_i0l_in)
 
-Prototipo clickeable de alta fidelidad:
 
-https://marvelapp.com/5ei6a07/screen/46634932
+[Prototipo clickeable de alta fidelidad](https://marvelapp.com/5ei6a07/screen/46634932)
+
+
 
