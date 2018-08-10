@@ -51,7 +51,7 @@ Como resultado preeliminar se realizó el siguiente flujo:
 
 https://whimsical.co/61UP2DSSoWmTyyW5KmQviA
 
-#Hitorias de Usuario
+#Historias de Usuario
 
 "Yo como administrador quiero contar con el nombre de los visitantes, motivo de su visita, hora de entrada y a quién visitó para poder acceder a esa información en caso de requerirla"
 
