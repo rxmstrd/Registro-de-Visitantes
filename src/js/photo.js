@@ -1,5 +1,5 @@
-let btnPhoto = document.getElementById('btnPhoto');
+// let btnPhoto = document.getElementById('btnPhoto');
 
-btnPhoto.addEventListener('click', event =>{
-  location.href = 'employees.html';
-});
+// btnPhoto.addEventListener('click', event =>{
+//   location.href = 'employees.html';
+// });

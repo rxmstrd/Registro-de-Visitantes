@@ -1,16 +1,33 @@
 .margen-welcome {
-    margin-top: 150px;
+    margin-top: 80px;
 }
 
 .margen {
-    margin-top: 50px;
+    margin-top: 25px;
 }
 
-.text {
-    color: rgb(172, 120, 240);
+.text-color {
+    color: rgb(27, 27, 27);
+    /* font-size: 50px; */
 }
 
 html {
     font-size: 1rem;
   }
-  
+
+  header {
+    background-color: rgb(27, 27, 27);
+    color: aliceblue;
+    font-size: 150%;
+    /* padding: px; */
+}
+img {
+    max-width: 100%;
+    height: auto;
+    width: 100% \9
+}
+
+canvas {
+    width: inherit;
+    height: inherit
+}
