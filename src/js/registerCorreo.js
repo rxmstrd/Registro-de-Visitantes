@@ -41,6 +41,7 @@ const userVisit = () => {
           Apellido: secondName.value,
           Asunto: subject.value,
           correo: email.value,
+
         };
         return sendVisit(userData);
       }
@@ -80,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
 const convertToArray = (data) => {
   return Object.values(data);
 };
-window.getData = () => {
+const getData = () => {
   const url = 'https://api.myjson.com/bins/bisz0';
   fetch(url)
     .then((response) => response.json())
@@ -176,8 +177,6 @@ const photoSave = () => {
   sectionToVisit.style.display = 'block';
   // goEnd.style.display = ('block');
 };
-
-
 
 camera.addEventListener('click', goCamera);
 captureButton.addEventListener('click', photoshot);
