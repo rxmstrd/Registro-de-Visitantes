@@ -81,8 +81,10 @@ document.addEventListener('DOMContentLoaded', () => {
 const convertToArray = (data) => {
   return Object.values(data);
 };
-const getData = () => {
-  const url = 'https://api.myjson.com/bins/bisz0';
+
+window.getData = () => {
+  const url = '../../data/data.json';
+
   fetch(url)
     .then((response) => response.json())
     .then((data) => {
