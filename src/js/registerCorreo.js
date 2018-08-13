@@ -81,7 +81,7 @@ const convertToArray = (data) => {
   return Object.values(data);
 };
 window.getData = () => {
-  const url = 'https://api.myjson.com/bins/bisz0';
+  const url = '../../data/data.json';
   fetch(url)
     .then((response) => response.json())
     .then((data) => {
