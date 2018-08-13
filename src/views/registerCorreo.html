@@ -31,49 +31,52 @@
       </div>
     </header>
     <!-- seccion formulario -->
-    <div class="row margen-welcome">
-      <div class="col-sm-12 col-lg-6 form-group">
-        <label class="text font-weight-bold">
-          ¿Cuál es tu Nombre?:
-        </label>
-        <input id="name" class="form-control" placeholder="Nombre" type="text" v-model="from_name">
+    <section id="form">
+      <div class="row margen-welcome">
+        <div class="col-sm-12 col-lg-6 form-group">
+          <label class="text font-weight-bold">
+            ¿Cuál es tu Nombre?:
+          </label>
+          <input id="name" class="form-control" placeholder="Nombre" type="text" v-model="from_name">
+        </div>
+        <div class="col-sm-12 col-lg-6 form-group">
+          <label class="text font-weight-bold">
+            ¿Cuál es tu Apellido?:
+          </label>
+          <input id="secondName" class="form-control" placeholder="Apellido" type="text" v-model="from_name">
+        </div>
       </div>
-      <div class="col-sm-12 col-lg-6 form-group">
-        <label class="text font-weight-bold">
-          ¿Cuál es tu Apellido?:
-        </label>
-        <input id="secondName" class="form-control" placeholder="Apellido" type="text" v-model="from_name">
+      <div class="row">
+        <div class="col-sm-12 col-lg-6 form-group">
+          <label class="text font-weight-bold">
+            ¿Cuál es tu Correo Electrónico?:
+          </label>
+          <input id="email" class="form-control" placeholder="email" type="email" v-model="from_email">
+        </div>
+        <div class="col-sm-12 col-lg-6 form-group">
+          <label class="text font-weight-bold">
+            ¿Motivo de su visita?:
+          </label>
+          <input id="subject" class="form-control" placeholder="Asunto" type="text" v-model="subject">
+        </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="col-sm-12 col-lg-6 form-group">
-        <label class="text font-weight-bold">
-          ¿Cuál es tu Correo Electrónico?:
-        </label>
-        <input id="email" class="form-control" placeholder="email" type="email" v-model="from_email">
-      </div>
-      <div class="col-sm-12 col-lg-6 form-group">
-        <label class="text font-weight-bold">
-          ¿Motivo de su visita?:
-        </label>
-        <input id="subject" class="form-control" placeholder="Asunto" type="text" v-model="subject">
-      </div>
-    </div>
+    </section>
 
     <!--Ingreso de la fotografia-->
-    <section class="row" style="display: none;">
+    <section class="row" id="section-photo" style="display: none;">
       <button class="col-4 offset-4 btn btn-dark btn-lg" id="camera">Camara</button>
+      <button class="col-4 offset-4 btn btn-dark btn-lg" id="save" style="display: none;">Salvar Foto</button>
       <button class="col-4 offset-4 btn btn-dark btn-lg" id="capture">Capturar Foto</button>
-      <div id="contentPhoto" class="col-12 col-lg-8 offset-lg-2">
-        <video id="player" class="offset-lg-1 offset-xl-2 img-fluid mx-auto d-block " alt="Responsive image" controls autoplay></video>
-      </div>
       <div id="photo" class="offset-5" style="display: none">
         <canvas id="snapshot" width="320" height="240"></canvas>
+      </div>
+      <div id="contentPhoto" class="col-12 col-lg-8 offset-lg-2">
+        <video id="player" class="offset-lg-1 offset-xl-2 img-fluid mx-auto d-block " alt="Responsive image" controls autoplay></video>
       </div>
     </section>
 
     <!--Selección a quien visitas-->
-    <section class="row" style="display: none;">
+    <section id="section-to-visit" class="row" style="display: none;">
       <div class="col-sm-12 col-lg-6 form-group">
         <div id="selectionEmployee">
           <label class="text font-weight-bold">
@@ -100,7 +103,10 @@
         <button id="comeback-button" class=" col-2 btn btn-dark">
           <i class="material-icons">chevron_left</i>
         </button>
-        <button id="go" class="offset-8 col-2 btn btn-dark">
+        <button id="go-ph" class="offset-8 col-2 btn btn-dark">
+          <i class="material-icons">chevron_right</i>
+        </button>
+        <button id="go-end" class="offset-8 col-2 btn btn-dark" style="display: none;">
           <i class="material-icons">chevron_right</i>
         </button>
       </div>

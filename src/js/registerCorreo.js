@@ -1,11 +1,16 @@
 // Registro
 // Llamados al dom para registrar visitantes y enviar correo.
+const form = document.getElementById('form');
+const sectionToVisit = document.getElementById('section-to-visit');
 const name = document.getElementById('name');
 const secondName = document.getElementById('secondName');
 const subject = document.getElementById('subject');
 const email = document.getElementById('email');
 const comeback = document.getElementById('comeback-button');
-const go = document.getElementById('go');
+const goPh = document.getElementById('go-ph');
+const sectionPhoto = document.getElementById('section-photo');
+const save = document.getElementById('save');
+const goEnd = document.getElementById('go-end');
 
 // función que validar no ingreso de <>
 // const datareview = () => {
@@ -20,6 +25,7 @@ const userVisit = () => {
   let mail = email.value;
   let nameV = name.value;
   let secondNameV = secondName.value;
+  let subjectV = subject.value;
   nameV = nameV.toUpperCase();
   secondNameV = secondNameV.toUpperCase();
   mail = mail.toLowerCase();
@@ -27,8 +33,8 @@ const userVisit = () => {
   if (nameV && secondNameV && subjectV && mail) {
     for (let i = 0; i < mail.length; i++) {
       if (mail[i] === '@') {
-        console.log(nameV);
-        swal('bien');
+        // console.log(subjectV);
+        // swal('bien');
         userData = {
           userId: userDate,
           Nombre: name.value,
@@ -45,13 +51,13 @@ const userVisit = () => {
   }
 };
 
-// userVisit();
 // boton que acciona la funcion UserVisit
-go.addEventListener('click', userVisit);
+goPh.addEventListener('click', userVisit);
 
 
 // boton que redirecciona de register al inicio
 comeback.addEventListener('click', event => location.href = '../index.html');
+
 
 // TRABAJO DE DIANA
 // FUNCION PARA LA SELECCION DE EMPLEADOS
@@ -75,11 +81,10 @@ window.getData = () => {
     .catch(err => console.log('Error', err.message));
 };
 const drawEmployees = (array) => {
-  // console.log(array);
   const containeremployees = document.getElementById('employees-list');
   let template = '';
   array.forEach((employees) => {
-    // console.log(employees);
+    console.log(employees);
     template += `<article class="item-employees">
               <div class="col s12 m12">
                   <div class="card horizontal">
@@ -137,6 +142,8 @@ const photoshot = () => {
   });
   // player.style.display = 'none';
   photo.style.display = 'block';
+  captureButton.style.display = 'none';
+  save.style.display = 'block';
 };
 
 const goCamera = () => {
@@ -147,6 +154,29 @@ const goCamera = () => {
   camera.style.display = 'none';
 };
 
+const photoSave = () => {
+  /* ********** funcionalidad que extraiga foto para firebase***********/
+  sectionPhoto.style.display = 'none';
+  sectionToVisit.style.display = 'block';
+  goEnd.style.display = ('block');
+};
+
+const endRegister = () => {
+  swal({
+      title: '¡Anotado!',
+      text: 'Se enviara un email a tu anfitrion para avisar de tu llegada espera en recepción',
+      icon: 'success',
+      buttons: true,
+    })
+    .then(buttons => {
+      if (buttons === true) {
+        location.href = '../index.html';
+      }
+    });
+}
+
 camera.addEventListener('click', goCamera);
 captureButton.addEventListener('click', photoshot);
+save.addEventListener('click', photoSave);
+goEnd.addEventListener('click', endRegister);
 // FIN TRABAJO DIANA
