@@ -68,7 +68,7 @@ const convertToArray = (data) => {
   return Object.values(data);
 };
 window.getData = () => {
-  const url = 'https://api.myjson.com/bins/bisz0';
+  const url = 'https://api.myjson.com/bins/ltmic';
   fetch(url)
     .then((response) => response.json())
     .then((data) => {
@@ -163,17 +163,17 @@ const photoSave = () => {
 
 const endRegister = () => {
   swal({
-      title: '¡Anotado!',
-      text: 'Se enviara un email a tu anfitrion para avisar de tu llegada espera en recepción',
-      icon: 'success',
-      buttons: true,
-    })
+    title: '¡Anotado!',
+    text: 'Se enviara un email a tu anfitrion para avisar de tu llegada espera en recepción',
+    icon: 'success',
+    buttons: true,
+  })
     .then(buttons => {
       if (buttons === true) {
         location.href = '../index.html';
       }
     });
-}
+};
 
 camera.addEventListener('click', goCamera);
 captureButton.addEventListener('click', photoshot);

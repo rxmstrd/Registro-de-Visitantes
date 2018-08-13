@@ -41,7 +41,7 @@ Se realizaron las siguientes entrevistas:
 Se realizó la prueba de Cliente incognito en:
 We-work Insurgentes Sur 601
 
-Documentación en Proceso en estos [Archivos](https://drive.google.com/open?id=10ku7Gbd8o37HP1_roXEc7s3-F_i0l_in)
+Documentación en Proceso en estos [Archivos](https://drive.google.com/open?id=1-B-mSLf4ZliP2SsUPjZbWXcGzBIAGpIO)
 
 
 Como resultado preeliminar se realizó el siguiente [flujo](https://whimsical.co/61UP2DSSoWmTyyW5KmQviA).
@@ -58,7 +58,7 @@ Como resultado preeliminar se realizó el siguiente [flujo](https://whimsical.co
 
 # Prototipado
 
-[Scketch](https://drive.google.com/open?id=10ku7Gbd8o37HP1_roXEc7s3-F_i0l_in)
+[Scketch](https://drive.google.com/open?id=1-B-mSLf4ZliP2SsUPjZbWXcGzBIAGpIO)
 
 
 [Prototipo clickeable de alta fidelidad](https://marvelapp.com/5ei6a07/screen/46634932)
