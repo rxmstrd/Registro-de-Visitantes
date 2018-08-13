@@ -14,8 +14,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
     crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
 
 
   <!--Link css-->
@@ -31,7 +30,7 @@
         <h3 class="offset-8">Tehuntepec 170</h3>
       </div>
     </header>
-          <!-- seccion formulario -->
+    <!-- seccion formulario -->
     <div class="row margen-welcome">
       <div class="col-sm-12 col-lg-6 form-group">
         <label class="text font-weight-bold">
@@ -55,52 +54,53 @@
       </div>
       <div class="col-sm-12 col-lg-6 form-group">
         <label class="text font-weight-bold">
-          ¿Motivo de visita?:
+          ¿Motivo de su visita?:
         </label>
         <input id="subject" class="form-control" placeholder="Asunto" type="text" v-model="subject">
       </div>
     </div>
-      
-      <!--Selección a quien visitas-->
-      <section class="row">
-        <div class="col-sm-12 col-lg-6 form-group">
-          <div id="selectionEmployee">
-            <label class="text font-weight-bold">
-              ¿A quien visitas?:
-            </label>
-            <!-- Input para filtrar  -->
-            <form id="search-form " class="col s11 offset-s1">
-              <div class="input-field col s12">
-                <input id="search" type="search" placeholder="Anfitrion" class="form-control">
-              </div>
-            </form>
-            <div id="result">
-            </div>
-            <!-- Crear tarjetas de restaurantes  -->
-            <section class="container" id="employees-list" style="display: none">
-            </section>
-          </div>
-        </div>
-      </section>
 
-      <!--Ingreso de la fotografia-->
-      <section class="row">
-        <div id="contentPhoto" class="col-12 col-lg-8 offset-lg-2">
-          <video id="player" class="offset-lg-1 offset-xl-2 img-fluid mx-auto d-block " alt="Responsive image" controls autoplay></video>
-          <div class="col-2">
-            <button class="btn btn-dark" id="capture">Capturar</button>
-            <canvas id="snapshot"></canvas>
+    <!--Ingreso de la fotografia-->
+    <section class="row" style="display: none;">
+      <button class="col-4 offset-4 btn btn-dark btn-lg" id="camera">Camara</button>
+      <button class="col-4 offset-4 btn btn-dark btn-lg" id="capture">Capturar Foto</button>
+      <div id="contentPhoto" class="col-12 col-lg-8 offset-lg-2">
+        <video id="player" class="offset-lg-1 offset-xl-2 img-fluid mx-auto d-block " alt="Responsive image" controls autoplay></video>
+      </div>
+      <div id="photo" class="offset-5" style="display: none">
+        <canvas id="snapshot" width="320" height="240"></canvas>
+      </div>
+    </section>
+
+    <!--Selección a quien visitas-->
+    <section class="row" style="display: none;">
+      <div class="col-sm-12 col-lg-6 form-group">
+        <div id="selectionEmployee">
+          <label class="text font-weight-bold">
+            ¿A quien visitas?:
+          </label>
+          <!-- Input para filtrar  -->
+          <form id="search-form " class="col s11 offset-s1">
+            <div class="input-field col s12">
+              <input id="search" type="search" placeholder="Anfitrion" class="form-control">
+            </div>
+          </form>
+          <div id="result">
           </div>
+          <!-- Crear tarjetas de restaurantes  -->
+          <section class="container" id="employees-list" style="display: none">
+          </section>
         </div>
-      </section>
+      </div>
+    </section>
 
 
     <footer>
       <div class="row">
-        <button id="comeback" class=" col-2 btn btn-dark">
+        <button id="comeback-button" class=" col-2 btn btn-dark">
           <i class="material-icons">chevron_left</i>
         </button>
-        <button id="enviar" class="offset-8 col-2 btn btn-dark">
+        <button id="go" class="offset-8 col-2 btn btn-dark">
           <i class="material-icons">chevron_right</i>
         </button>
       </div>
@@ -126,8 +126,8 @@
 
   <!--JS-->
   <script src="../js/credenciales.js"></script>
-  <script src="../js/registerCorreo.js"></script>
   <script src="../js/data.js"></script>
+  <script src="../js/registerCorreo.js"></script>
   <!-- <script src="../js/photo.js"></script> -->
 </body>
 
