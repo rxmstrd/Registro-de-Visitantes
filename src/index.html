@@ -15,25 +15,50 @@
 </head>
 
 <body>
-  <div class="container">
+  <div class="container-fluid">
+    <!-- header con acceso a vista de administrador -->
+    <header class="row">
+      <div class="col-12 col-xl-12">
+        <ul class="nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Menú</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Administrador</a>
+              <div class="dropdown-divider"></div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </header>
+
     <div class="row">
-      <div class="col-8 offset-2 text-center text margen-welcome">
-        <h2>Bienvenidxs</h2>
+      <div class="offset-lg-1 offset-xl-2 img-fluid mx-auto d-block " alt="Responsive image">
+        <img src="assets/img/ter.jpg">
       </div>
     </div>
     <div class="row">
-      <div class="col-8 offset-2 text-center text margen">
-        <h1>Terminal 1</h1>
+      <div class="col-12 text-center">
+        <h1 class="">Terminal 1</h1>
+        <h3 class="offset-6 offset-lg-2">Tehuntepec 170</h3>
       </div>
     </div>
     <div class="row">
-      <div class="col-8 offset-2 text-center text margen">
-        <button class= "btn btn-outline-dark btn-lg" id="register">
-          Registro
+      <!-- <div class="col-8 offset-2 text-center text margen"> -->
+      <div class="col-8 offset-2 text-center text">
+        <h3>
+          Bienvenido (a)
+        </h3>
+      </div>
+      <div class="col-8 offset-2 text-center text">
+        <button class="btn btn-outline-dark btn-lg" id="register">
+          Registra tu visita
         </button>
       </div>
     </div>
 
+    <footer class="margen">
+      <p><a href="http://www.laboratoria.la/">Laboratoria</a>|2018</p>
+    </footer>
   </div>
 
   <!-- firebase -->
@@ -49,5 +74,4 @@
   <script src="js/credenciales.js"></script>
   <script src="js/app.js"></script>
 </body>
-
 </html>
