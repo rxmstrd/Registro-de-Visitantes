@@ -20,6 +20,7 @@ const userVisit = () => {
   let mail = email.value;
   let nameV = name.value;
   let secondNameV = secondName.value;
+  let subjectV = subject.value;
   nameV = nameV.toUpperCase();
   secondNameV = secondNameV.toUpperCase();
   mail = mail.toLowerCase();
@@ -27,7 +28,7 @@ const userVisit = () => {
   if (nameV && secondNameV && subjectV && mail) {
     for (let i = 0; i < mail.length; i++) {
       if (mail[i] === '@') {
-        console.log(nameV);
+        // console.log(subjectV);
         swal('bien');
         userData = {
           userId: userDate,
