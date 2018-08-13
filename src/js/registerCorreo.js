@@ -10,7 +10,7 @@ const comeback = document.getElementById('comeback-button');
 const goPh = document.getElementById('go-ph');
 const sectionPhoto = document.getElementById('section-photo');
 const save = document.getElementById('save');
-const goEnd = document.getElementById('go-end');
+
 
 // función que validar no ingreso de <>
 // const datareview = () => {
@@ -58,6 +58,19 @@ goPh.addEventListener('click', userVisit);
 // boton que redirecciona de register al inicio
 comeback.addEventListener('click', event => location.href = '../index.html');
 
+const endRegister = () => {
+  swal({
+      title: '¡Anotado!',
+      text: 'Se enviara un email a tu anfitrion para avisar de tu llegada espera en recepción',
+      icon: 'success',
+      buttons: true,
+    })
+    .then(buttons => {
+      if (buttons === true) {
+        location.href = '../index.html';
+      }
+    });
+};
 
 // TRABAJO DE DIANA
 // FUNCION PARA LA SELECCION DE EMPLEADOS
@@ -68,7 +81,7 @@ const convertToArray = (data) => {
   return Object.values(data);
 };
 window.getData = () => {
-  const url = 'https://api.myjson.com/bins/ltmic';
+  const url = 'https://api.myjson.com/bins/bisz0';
   fetch(url)
     .then((response) => response.json())
     .then((data) => {
@@ -94,7 +107,7 @@ const drawEmployees = (array) => {
                   <p>${employees.nombre}</p>
                   <p>${employees.Apellido}</p>
                   <p>${employees.empresa}</p>
-                  <button id="go-end" class="offset-8 col-2 btn btn-dark">Enviar</button>
+                  <button id="btn-enviar" class="offset-8 col-2 btn btn-dark">Enviar</button>
                               </div>
                           </div>
                       </div>
@@ -102,7 +115,10 @@ const drawEmployees = (array) => {
            </article>`;
   });
   containeremployees.innerHTML = template;
+  const goEnd = document.getElementById('btn-enviar');
+  goEnd.addEventListener('click', endRegister);
 };
+const goEnd = document.getElementById('btn-enviar');
 const listeners = (array) => {
   const search = document.getElementById('search');
   search.addEventListener('keyup', () => {
@@ -158,25 +174,13 @@ const photoSave = () => {
   /* ********** funcionalidad que extraiga foto para firebase***********/
   sectionPhoto.style.display = 'none';
   sectionToVisit.style.display = 'block';
-  goEnd.style.display = ('block');
+  // goEnd.style.display = ('block');
 };
 
-const endRegister = () => {
-  swal({
-    title: '¡Anotado!',
-    text: 'Se enviara un email a tu anfitrion para avisar de tu llegada espera en recepción',
-    icon: 'success',
-    buttons: true,
-  })
-    .then(buttons => {
-      if (buttons === true) {
-        location.href = '../index.html';
-      }
-    });
-};
+
 
 camera.addEventListener('click', goCamera);
 captureButton.addEventListener('click', photoshot);
 save.addEventListener('click', photoSave);
-goEnd.addEventListener('click', endRegister);
+
 // FIN TRABAJO DIANA
