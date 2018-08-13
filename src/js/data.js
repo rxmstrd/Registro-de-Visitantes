@@ -1,14 +1,14 @@
 window.sendVisit = (visitData) => {
   databaseRef = firebase.database().ref(`Visitantes/${visitData.userId}-${visitData.Nombre}`);
-  // databaseRef.set(visitData);
+  databaseRef.set(visitData);
   swal({
       // title: '¡Anotado!',
       // text: 'Se enviara un email a tu anfitrion para avisar de tu llegada espera en recepción',
       title: '¡Anotado!',
-      text: 'A continuanción, necesitamos una foto',
+      text: 'A continuación, necesitamos una foto',
       icon: 'success',
       buttons: true,
-      // dangerMode: true,
+      dangerMode: true,
     })
     .then(buttons => {
       if (buttons === true) {
