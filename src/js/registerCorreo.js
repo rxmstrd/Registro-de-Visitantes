@@ -94,7 +94,7 @@ const drawEmployees = (array) => {
                   <p>${employees.nombre}</p>
                   <p>${employees.Apellido}</p>
                   <p>${employees.empresa}</p>
-                  <button id="btnEnviar" class="offset-8 col-2 btn btn-dark">Enviar</button>
+                  <button id="go-end" class="offset-8 col-2 btn btn-dark">Enviar</button>
                               </div>
                           </div>
                       </div>
