@@ -1,22 +1,26 @@
-
-
-databaseRef = firebase.database();
-
-
-
-const sendVisit = () => {
-  visitData = {
-    Nombre: 'Maria',
-    Apellido: 'Mendez',
-    Correo: 'garciaivonn11@gmail.com'
-  };
-  userId = 1;
-  databaseRef = firebase.database().ref(`Visitantes/${userId}`);
-  console.log(databaseRef);
-  console.log(visitData);
-  databaseRef.set(visitData);
+window.sendVisit = (visitData) => {
+  databaseRef = firebase.database().ref(`Visitantes/${visitData.userId}-${visitData.Nombre}`);
+  // databaseRef.set(visitData);
+  swal({
+      // title: '¡Anotado!',
+      // text: 'Se enviara un email a tu anfitrion para avisar de tu llegada espera en recepción',
+      title: '¡Anotado!',
+      text: 'A continuanción, necesitamos una foto',
+      icon: 'success',
+      buttons: true,
+      // dangerMode: true,
+    })
+    .then(buttons => {
+      if (buttons === true) {
+        return viewPhoto();
+        // location.href = '../index.html';
+      }
+    });
+  // window.onload;
 };
-sendVisit();
 
-
-// FUNCION PARA LA SELECCION DE EMPLEADOS
+const viewPhoto = () => {
+  form.style.display = 'none';
+  sectionPhoto.style.display = 'block';
+  goPh.style.display = 'none';
+};

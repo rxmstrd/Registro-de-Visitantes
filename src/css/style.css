@@ -1,4 +1,37 @@
-h1{
-    text-align: center;
+.margen-welcome {
+    margin-top: 80px;
 }
 
+.margen {
+    margin-top: 25px;
+}
+
+.text-color {
+    color: rgb(51, 51, 51);
+    /* font-size: 50px; */
+}
+
+html {
+    font-size: 1rem;
+  }
+
+  header, .modal-header {
+    background-color: rgb(51, 51, 51);
+    color: aliceblue;
+    font-size: 200%;
+    /* padding: px; */
+}
+img {
+    max-width: 100%;
+    height: auto;
+    width: 100% \9
+}
+
+nav {
+    background-color: rgb(190, 190, 190);
+    color: rgb(26, 26, 26);
+    font-size: 150%;
+    border-bottom-style: groove;
+    /* width: inherit;
+    height: inherit; */
+}
