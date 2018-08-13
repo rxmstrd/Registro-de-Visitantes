@@ -15,7 +15,6 @@ let handleSuccess = (stream) => {
   player.srcObject = stream;
   videoTracks = stream.getVideoTracks();
 };
-
 captureButton.addEventListener('click', event => {
   let context = snapshot.getContext('2d');
   // Draw the video frame to the canvas.
