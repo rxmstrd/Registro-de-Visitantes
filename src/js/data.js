@@ -1,7 +1,7 @@
 window.sendVisit = (visitData) => {
   databaseRef = firebase.database().ref(`Visitantes/${visitData.userId}-${visitData.Nombre}`);
   console.log(databaseRef);
-  // databaseRef.set(visitData);
+  databaseRef.set(visitData);
   swal({
       title: '¡Anotado!',
       text: 'A continuación, necesitamos una foto',
