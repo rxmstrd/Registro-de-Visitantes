@@ -75,6 +75,7 @@ const endRegister = () => {
 
 // TRABAJO DE DIANA
 // FUNCION PARA LA SELECCION DE EMPLEADOS
+const containeremployees = document.getElementById('employees-list');
 document.addEventListener('DOMContentLoaded', () => {
   getData();
 }, false);
@@ -97,7 +98,6 @@ window.getData = () => {
     .catch(err => console.log('Error', err.message));
 };
 const drawEmployees = (array) => {
-  const containeremployees = document.getElementById('employees-list');
   let template = '';
   array.forEach((employees) => {
     console.log(employees);
@@ -125,13 +125,14 @@ const goEnd = document.getElementById('btn-enviar');
 const listeners = (array) => {
   const search = document.getElementById('search');
   search.addEventListener('keyup', () => {
-    if (search.value.trim().length >= 0) {
+    if (search.value.trim().length > 0) {
       const searching = search.value.toLowerCase();
       const filteredEmployees = array.filter((employees) => {
         return employees.nombre.toLowerCase().indexOf(searching) >= 0;
       });
       drawEmployees(filteredEmployees);
     }
+    containeremployees.style.display = 'block';
   });
 };
 

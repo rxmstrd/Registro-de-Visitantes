@@ -35,3 +35,6 @@ nav {
     /* width: inherit;
     height: inherit; */
 }
+.container{
+    display: none;
+}
