@@ -25,21 +25,20 @@
   <div class="container-fluid">
     <!-- boton volver en header -->
     <header class="row">
-      <div class="col-12 text-center">
-        <h1 class="offset-6">Terminal 1</h1>
-        <h3 class="offset-8">Tehuntepec 170</h3>
+      <div class="col">
+        <p class="offset-4">Terminal 1, Tehuantepec 170</p>
       </div>
     </header>
     <!-- seccion formulario -->
     <section id="form">
       <div class="row margen-welcome">
-        <div class="col-sm-12 col-lg-6 form-group">
+        <div class="col-sm-10 col-lg-5 offset-sm-1  form-group">
           <label class="text font-weight-bold">
             ¿Cuál es tu Nombre?:
           </label>
           <input id="name" class="form-control" placeholder="Nombre" type="text" v-model="from_name">
         </div>
-        <div class="col-sm-12 col-lg-6 form-group">
+        <div class="col-sm-10 col-lg-5 offset-sm-1 offset-lg-0 form-group">
           <label class="text font-weight-bold">
             ¿Cuál es tu Apellido?:
           </label>
@@ -47,13 +46,13 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-sm-12 col-lg-6 form-group">
+        <div class="col-sm-10 col-lg-5 offset-sm-1 form-group">
           <label class="text font-weight-bold">
             ¿Cuál es tu Correo Electrónico?:
           </label>
           <input id="email" class="form-control" placeholder="email" type="email" v-model="from_email">
         </div>
-        <div class="col-sm-12 col-lg-6 form-group">
+        <div class="col-sm-10 col-lg-5 offset-sm-1 offset-lg-0 form-group">
           <label class="text font-weight-bold">
             ¿Motivo de su visita?:
           </label>
@@ -64,23 +63,23 @@
 
     <!--Ingreso de la fotografia-->
     <section class="row" id="section-photo" style="display: none;">
-      <button class="col-4 offset-4 btn btn-dark btn-lg" id="camera">Camara</button>
+      <button class="col-4 offset-4 btn btn-dark btn-lg" id="camera">Cámara</button>
       <button class="col-4 offset-4 btn btn-dark btn-lg" id="save" style="display: none;">Salvar Foto</button>
       <button class="col-4 offset-4 btn btn-dark btn-lg" id="capture">Capturar Foto</button>
       <div id="photo" class="offset-5" style="display: none">
         <canvas id="snapshot" width="320" height="240"></canvas>
       </div>
-      <div id="contentPhoto" class="col-12 col-lg-8 offset-lg-2">
+      <div id="contentPhoto" class="col-sm-12 col-lg-8 offset-lg-2">
         <video id="player" class="offset-lg-1 offset-xl-2 img-fluid mx-auto d-block " alt="Responsive image" controls autoplay></video>
       </div>
     </section>
 
     <!--Selección a quien visitas-->
     <section id="section-to-visit" class="row" style="display: none;">
-      <div class="col-sm-12 col-lg-6 form-group">
+      <div class="col-sm-10 col-lg-6 offset-sm-1 offset-lg-2 form-group">
         <div id="selectionEmployee">
           <label class="text font-weight-bold">
-            ¿A quien visitas?:
+            ¿A quién visitas?:
           </label>
           <!-- Input para filtrar  -->
           <form id="search-form " class="col s11 offset-s1">
@@ -96,14 +95,12 @@
         </div>
       </div>
     </section>
-
-
     <footer>
       <div class="row">
-        <button id="comeback-button" class=" col-2 btn btn-dark">
+        <button id="comeback-button" class=" offset-1 col-2 btn btn-dark">
           <i class="material-icons">chevron_left</i>
         </button>
-        <button id="go-ph" class="offset-8 col-2 btn btn-dark">
+        <button id="go-ph" class="offset-5 col-2 btn btn-dark">
           <i class="material-icons">chevron_right</i>
         </button>
         <!-- <button id="go-end" class="offset-8 col-2 btn btn-dark" style="display: none;">
@@ -112,6 +109,7 @@
       </div>
     </footer>
   </div>
+
 
   <!-- firebase -->
   <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
