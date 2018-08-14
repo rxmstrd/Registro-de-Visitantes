@@ -184,5 +184,3 @@ const photoSave = () => {
 camera.addEventListener('click', goCamera);
 captureButton.addEventListener('click', photoshot);
 save.addEventListener('click', photoSave);
-
-// FIN TRABAJO DIANA
