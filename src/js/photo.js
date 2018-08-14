@@ -20,6 +20,8 @@ captureButton.addEventListener('click', event => {
   // Draw the video frame to the canvas.
   context.drawImage(player, 0, 0, snapshotCanvas.width,
     snapshotCanvas.height);
+  
+  let dataUrl = snapshotCanvas.toDataURL();
 
   // Stop all video streams.
   videoTracks.forEach((track) => {
