@@ -12,10 +12,6 @@ const sectionPhoto = document.getElementById('section-photo');
 const save = document.getElementById('save');
 
 
-// función que validar no ingreso de <>
-// const datareview = () => {
-// };
-
 // funcion que guarda los datos del usuario
 const userVisit = () => {
   let date = new Date();
@@ -34,14 +30,12 @@ const userVisit = () => {
     for (let i = 0; i < mail.length; i++) {
       if (mail[i] === '@') {
         // console.log(subjectV);
-        // swal('bien');
         userData = {
           userId: userDate,
           Nombre: name.value,
           Apellido: secondName.value,
           Asunto: subject.value,
           correo: email.value,
-
         };
         return sendVisit(userData);
       }
@@ -59,18 +53,9 @@ goPh.addEventListener('click', userVisit);
 // boton que redirecciona de register al inicio
 comeback.addEventListener('click', event => location.href = '../index.html');
 
-const endRegister = () => {
-  swal({
-      title: '¡Anotado!',
-      text: 'Se enviara un email a tu anfitrion para avisar de tu llegada espera en recepción',
-      icon: 'success',
-      buttons: true,
-    })
-    .then(buttons => {
-      if (buttons === true) {
-        location.href = '../index.html';
-      }
-    });
+const endRegister = (num) => {
+  let btnEnd = document.getElementById(`btn-enviar${num}`);
+  btnEnd.addEventListener('click', e => location.href = '../index.html');
 };
 
 // TRABAJO DE DIANA
@@ -94,34 +79,54 @@ window.getData = () => {
       drawEmployees(arrayEmployees);
     })
     // TEXTO QUE IMPRIME EL ERROR
-    .catch(err => console.log('Error', err.message));
+    // .catch(err => console.log('Error', err.message));
 };
 const drawEmployees = (array) => {
   const containeremployees = document.getElementById('employees-list');
+  let num = 0;
   let template = '';
   array.forEach((employees) => {
-    console.log(employees);
+    // console.log(employees);
+    num += 1;
     template += `<article class="item-employees">
               <div class="col s12 m12">
                   <div class="card horizontal">
                       <div class="card-image">
                           <div class="card-stacked">
                               <div class="card-content">
-                  <p>${employees.nombre}</p>
-                  <p>${employees.Apellido}</p>
-                  <p>${employees.empresa}</p>
-                  <button id="btn-enviar" class="offset-8 col-2 btn btn-dark">Enviar</button>
+                                <p>${employees.nombre} ${employees.Apellido}</p>
+                                <p>${employees.empresa}</p>
+                                <button type="button" class="btn btn-outline-dark" data-toggle="modal" data-target="#modal${num}">
+                                Seleccionar
+                              </button>
                               </div>
                           </div>
                       </div>
                   </div>
-           </article>`;
+                  <div class="modal fade" id="modal${num}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h4 class="modal-title" id="exampleModalLabel">¡Anotado!</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <h6>Se enviara un email a tu anfitrion para avisar de tu llegada espera en recepción</h6>
+                      </div>
+                      <div class="modal-footer">
+                        <button id = "btn-enviar${num}" type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+          </article>`;
+    // endRegister(num);
   });
   containeremployees.innerHTML = template;
-  const goEnd = document.getElementById('btn-enviar');
-  goEnd.addEventListener('click', endRegister);
 };
-const goEnd = document.getElementById('btn-enviar');
+
 const listeners = (array) => {
   const search = document.getElementById('search');
   search.addEventListener('keyup', () => {
